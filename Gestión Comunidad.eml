@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/Gestión Comunidad"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jfoenix-8.0.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/jfoenix-8.0.5.jar!/"/>
+	</lib>
+	<lib name="sqlite-jdbc-3.23.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/sqlite-jdbc-3.23.1.jar!/"/>
+	</lib>
+	<lib name="poi-4.0.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/jar/poi-4.0.0.jar!/"/>
+	</lib>
+</component>

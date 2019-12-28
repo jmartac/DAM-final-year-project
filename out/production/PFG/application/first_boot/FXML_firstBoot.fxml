@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="firstBootMainPanel" minHeight="0.0" minWidth="0.0" prefHeight="1162.0" prefWidth="804.0"
+            stylesheets="@../resources/main-style.css" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.first_boot.FXML_firstBootController">
+    <children>
+        <Label layoutX="147.0" layoutY="14.0" text="Configuración necesaria para comenzar">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <ScrollPane fitToWidth="true" layoutX="14.0" layoutY="59.0" prefHeight="482.0" prefWidth="776.0"
+                    AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0"
+                    AnchorPane.topAnchor="60.0">
+            <content>
+                <AnchorPane fx:id="panePrincipal" minHeight="0.0" minWidth="0.0" prefHeight="1087.0" prefWidth="761.0">
+                    <children>
+                        <Label layoutX="7.0" layoutY="14.0" prefHeight="62.0" prefWidth="776.0"
+                               text="Es necesario introducir una serie de datos básicos para que el programa tenga una base de la que partir. Por favor, introduzca los siguientes datos:"
+                               wrapText="true" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="21.0">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fx:id="imgCheck1" fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="76.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../resources/sign-check-icon.png"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="39.0" layoutY="76.0" text="Introduzca al menos 2 comuneros:">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <TableView fx:id="tvComunerosBase" layoutX="140.0" layoutY="117.0" prefHeight="177.0"
+                                   prefWidth="497.0">
+                            <columns>
+                                <TableColumn fx:id="tcNombreCom" minWidth="80.0" prefWidth="192.0"
+                                             text="Nombre y apellidos"/>
+                                <TableColumn fx:id="tcDniCom" prefWidth="113.0" text="DNI"/>
+                                <TableColumn fx:id="tcFincaCom" prefWidth="77.0" text="Finca"/>
+                                <TableColumn fx:id="tcCuotaCom" prefWidth="103.0" text="Cuota mensual"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="cmiEliminar" mnemonicParsing="false"
+                                                  onAction="#handleEliminarComunero" text="Eliminar"/>
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <JFXTextField fx:id="tfNombre" layoutX="163.0" layoutY="328.0" prefHeight="30.0"
+                                      prefWidth="102.0" promptText="Nombre*">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets right="10.0"/>
+                            </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfApellidos" layoutX="265.0" layoutY="328.0" prefHeight="30.0"
+                                      prefWidth="161.0" promptText="Apellidos">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets right="10.0"/>
+                            </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfDni" layoutX="454.0" layoutY="328.0" prefHeight="30.0" prefWidth="134.0"
+                                      promptText="DNI*">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets right="10.0"/>
+                            </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfFinca" layoutX="163.0" layoutY="390.0" prefHeight="30.0" prefWidth="83.0"
+                                      promptText="Finca*">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets right="10.0"/>
+                            </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfCuota" layoutX="265.0" layoutY="390.0" prefHeight="30.0" prefWidth="97.0"
+                                      promptText="Cuota mensual*">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets right="10.0"/>
+                            </padding>
+                        </JFXTextField>
+                        <Label fx:id="lbCampoObligatorio" layoutX="548.0" layoutY="468.0" text="*Campo obligatorio">
+                            <font>
+                                <Font name="System Italic" size="11.0"/>
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="btAddComunero" layoutX="358.0" layoutY="446.0" onAction="#handleAddComunero"
+                                   text="Añadir" textFill="WHITE">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <ImageView fx:id="imgCheck2" fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="510.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../resources/sign-check-icon.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lbStep2" disable="true" layoutX="39.0" layoutY="510.0"
+                               text="Reparta el Porcentaje de participación para cada comunero (el total debería sumar 100%): "
+                               wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="lbConsejo" disable="true" layoutX="326.0" layoutY="810.0"
+                               text="*Doble clic en una celda de Participación para editar">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="lbPorcentaje" alignment="CENTER" disable="true" layoutX="293.0" layoutY="557.0"
+                               prefHeight="17.0" prefWidth="191.0" text="Porcentaje repartido: 0%" wrapText="true">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <TableView fx:id="tvParticipacion" disable="true" layoutX="153.0" layoutY="615.0"
+                                   prefHeight="195.0" prefWidth="471.0">
+                            <columns>
+                                <TableColumn fx:id="tcNombrePar" minWidth="80.0" prefWidth="239.8408203125"
+                                             resizable="false" text="Nombre y apellidos"/>
+                                <TableColumn fx:id="tcFincaPar" prefWidth="125.1591796875" resizable="false"
+                                             text="Finca"/>
+                                <TableColumn fx:id="tcPorcentajePar" prefWidth="107.0" resizable="false"
+                                             text="\% Participación"/>
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                            </columnResizePolicy>
+                        </TableView>
+                        <ImageView fx:id="imgCheck3" fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="871.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../resources/sign-check-icon.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lbStep3" disable="true" layoutX="39.0" layoutY="871.0"
+                               text="Indique el mes y el año por el que quiere empezar a desarrollar la gestión de la comunidad: "
+                               wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <JFXDatePicker fx:id="dpFechaGestion" disable="true" layoutX="303.0" layoutY="935.0"/>
+                        <JFXButton fx:id="btTerminar" disable="true" layoutX="351.0" layoutY="1012.0"
+                                   onAction="#handleTerminar" text="Terminar" textFill="WHITE">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </JFXButton>
+                        <Label layoutX="435.0" layoutY="294.0" text="*Doble clic en una celda para editar">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

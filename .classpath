@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/Gestión Comunidad/src"/>
+	<classpathentry kind="src" path="/Gestión Comunidad/jar"/>
+	<classpathentry exported="true" kind="lib" path="/Gestión Comunidad/jar/jfoenix-8.0.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Gestión Comunidad/jar/sqlite-jdbc-3.23.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Gestión Comunidad/jar/poi-4.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
