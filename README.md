@@ -1,11 +1,11 @@
 # Proyecto Fin de Grado
-PFG de CFGS Desarrollo de Aplicaciones Multiplataforma
+PFG de Desarrollo de Aplicaciones Multiplataforma (CFGS)
 
 Aplicación para gestión de comunidades de vecinos
 
 
 # Final Year Project
 
-FYP for Multiplatform Applications Development
+FYP for Multiplatform Applications Development (Certificate of Higher Education)
 
 It's an application to manage Owners' Communities (available in Spanish only).
