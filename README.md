@@ -1,10 +1,10 @@
-# Proyecto Fin de Grado
+# Proyecto Fin de Grado (2018)
 PFG de Desarrollo de Aplicaciones Multiplataforma (CFGS)
 
-Aplicación para gestión de comunidades de vecinos desarrollada en 2018
+Aplicación para gestión de comunidades de vecinos desarrollada en 2018.
 
 
-# Final Year Project
+# Final Year Project (2018)
 
 FYP for Multiplatform Applications Development (Certificate of Higher Education)
 
